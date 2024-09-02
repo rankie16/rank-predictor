@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rank Predictor</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Rank Predictor</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Predict Your Rank</h2>
+            <form id="rankForm">
+                <label for="exam">Select Exam:</label>
+                <select id="exam" name="exam" required>
+                    <option value="" disabled selected>Select an exam</option>
+                    <option value="hpcl">HPCL 2024</option>
+                    <option value="nfl">NFL 2024</option>
+                    <option value="gate">GATE 2025</option>
+                </select>
+                
+                <label for="specification">Select Specification:</label>
+                <select id="specification" name="specification" required>
+                    <option value="" disabled selected>Select a specification</option>
+                </select>
+                
+                <label for="score">Enter Your Score:</label>
+                <input type="number" id="score" name="score" required>
+                
+                <button type="submit">Predict Rank</button>
+            </form>
+            <p id="result"></p>
+            <p id="interviewStatus" style="font-weight: bold; margin-top: 20px;"></p> <!-- New element for interview status -->
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Rank Predictor</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
