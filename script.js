@@ -20,8 +20,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     { value: 'civil', text: 'Civil' },
                     { value: 'mechanical', text: 'Mechanical' },
                     { value: 'instrumentation', text: 'Instrumentation' },
-                    { value: 'electrical', text: 'Electrical' }
-                   
+                    { value: 'electrical', text: 'Electrical' },
+                    { value: 'chemical', text: 'Chemical' }
                 ];
                 break;
             case 'gate':
@@ -93,8 +93,11 @@ document.addEventListener('DOMContentLoaded', function() {
                     rank = score >= 140 ? "Top 1%" : score >= 130 ? "Top 10%" : score >= 120 ? "Top 40%" : "Below 40%";
                     interviewStatus = score >= 120 ? "Selected for Interview" : "Not Selected for Interview";
                     interviewStatusClass = score >= 120 ? "selected" : "not-selected";
+                } else if (specification === 'chemical') {
+                    rank = score >= 125 ? "Top 1%" : score >= 105 ? "Top 10%" : score >= 95 ? "Top 40%" : "Below 40%";
+                    interviewStatus = score >= 95 ? "Selected for Interview" : "Not Selected for Interview";
+                    interviewStatusClass = score >= 95 ? "selected" : "not-selected";
                 }
-                  
             } else if (exam === 'gate') {
                 if (specification === 'civil') {
                     rank = score >= 70 ? "Top 1%" : score >= 60 ? "Top 10%" : "Below 10%";
