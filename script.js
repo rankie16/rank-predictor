@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     { value: 'mechanical', text: 'Mechanical' },
                     { value: 'instrumentation', text: 'Instrumentation' },
                     { value: 'electrical', text: 'Electrical' }
-                    { value: 'chemical', text: 'Chemical' }
+                   
                 ];
                 break;
             case 'gate':
@@ -94,11 +94,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     interviewStatus = score >= 120 ? "Selected for Interview" : "Not Selected for Interview";
                     interviewStatusClass = score >= 120 ? "selected" : "not-selected";
                 }
-                  else if (specification === 'chemical') {
-                    rank = score >= 125 ? "Top 1%" : score >= 110 ? "Top 10%" : score >= 90 ? "Top 40%" : "Below 40%";
-                    interviewStatus = score >= 95 ? "Selected for Interview" : "Not Selected for Interview";
-                    interviewStatusClass = score >= 95? "selected" : "not-selected";
-                }
+                  
             } else if (exam === 'gate') {
                 if (specification === 'civil') {
                     rank = score >= 70 ? "Top 1%" : score >= 60 ? "Top 10%" : "Below 10%";
